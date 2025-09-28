@@ -404,6 +404,49 @@ offset_right = 1157.0
 offset_bottom = 665.0
 texture = ExtResource("1_mbvbo")
 
+[node name="InfoLabel1" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 51.0
+offset_right = 504.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Welcome to untitled adventure game!"
+
+[node name="InfoLabel2" type="Label" parent="."]
+offset_left = 378.0
+offset_top = 102.0
+offset_right = 1112.0
+offset_bottom = 137.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Use A and D or the left and right arrows to move left or right."
+
+[node name="InfoLabel3" type="Label" parent="."]
+offset_left = 53.0
+offset_top = 154.0
+offset_right = 787.0
+offset_bottom = 189.0
+theme_override_font_sizes/font_size = 25
+text = "Press W, up arrow, or space to jump."
+
+[node name="InfoLabel4" type="Label" parent="."]
+offset_left = 503.0
+offset_top = 213.0
+offset_right = 1118.0
+offset_bottom = 248.0
+theme_override_font_sizes/font_size = 25
+text = "Go through the portal to move on to the next level!"
+
+[node name="InfoLabel5" type="Label" parent="."]
+offset_left = 875.0
+offset_top = 291.0
+offset_right = 918.0
+offset_bottom = 326.0
+theme_override_font_sizes/font_size = 25
+text = "==>"
+
 [node name="Node2D" parent="." instance=ExtResource("2_luep3")]
 position = Vector2(86, 266)
 
@@ -413,41 +456,6 @@ tile_set = SubResource("TileSet_i3pqv")
 
 [node name="Node2D2" parent="." instance=ExtResource("3_1rg5t")]
 position = Vector2(408, 309)
-
-[node name="InfoLabel1" type="Label" parent="."]
-offset_left = 48.0
-offset_top = 51.0
-offset_right = 340.0
-offset_bottom = 74.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = "Welcome to untitled adventure game!"
-
-[node name="InfoLabel2" type="Label" parent="."]
-offset_left = 405.0
-offset_top = 110.0
-offset_right = 1139.0
-offset_bottom = 145.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = "Use A and D or the left and right arrows to move left or right."
-
-[node name="InfoLabel3" type="Label" parent="."]
-offset_left = 55.0
-offset_top = 153.0
-offset_right = 789.0
-offset_bottom = 188.0
-theme_override_font_sizes/font_size = 25
-text = "Press W, up arrow, or space to jump."
-
-[node name="InfoLabel4" type="Label" parent="."]
-offset_left = 487.0
-offset_top = 213.0
-offset_right = 1221.0
-offset_bottom = 248.0
-theme_override_font_sizes/font_size = 25
-text = "Go through the portal to move on to the next level!"
 
 [node name="Portal" parent="." instance=ExtResource("4_vvokv")]
 position = Vector2(963, 308)
