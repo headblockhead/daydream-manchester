@@ -1,12 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://ckudr8chj1kgo"]
+[gd_scene load_steps=7 format=4 uid="uid://ckudr8chj1kgo"]
 
 [ext_resource type="Texture2D" uid="uid://barm63frdlcir" path="res://tileset.png" id="1_nxx1f"]
 [ext_resource type="PackedScene" uid="uid://corge3g4cu8iw" path="res://player.tscn" id="2_luep3"]
 [ext_resource type="PackedScene" uid="uid://duxiutacar2iy" path="res://friend.tscn" id="3_1rg5t"]
-[ext_resource type="PackedScene" path="res://friend.tscn" id="3_1rg5t"]
-[ext_resource type="Script" uid="uid://el65pd1mu2cq" path="res://portal.gd" id="4_mbvbo"]
-[ext_resource type="Texture2D" uid="uid://ckk82iy6h817l" path="res://portal.png" id="5_0coyo"]
-[ext_resource type="PackedScene" uid="uid://dwqbpjn7sk2r4" path="res://TitleScreen/title_screen.tscn" id="5_ipp2d"]
+[ext_resource type="PackedScene" uid="uid://dof5o4jaeea7i" path="res://portal.tscn" id="4_vvokv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_onrkg"]
 resource_name = "terrain"
@@ -396,9 +393,6 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/1 = SubResource("TileSetAtlasSource_onrkg")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ipp2d"]
-size = Vector2(50, 62)
-
 [node name="Node2D" type="Node2D"]
 texture_filter = 1
 
@@ -444,14 +438,5 @@ offset_bottom = 248.0
 theme_override_font_sizes/font_size = 25
 text = "Go through the portal to move on to the next level!"
 
-[node name="Portal" type="Area2D" parent="."]
-position = Vector2(1055, 576)
-script = ExtResource("4_mbvbo")
-target_scene = ExtResource("5_ipp2d")
-
-[node name="Sprite2D" type="Sprite2D" parent="Portal"]
-scale = Vector2(2, 2)
-texture = ExtResource("5_0coyo")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal"]
-shape = SubResource("RectangleShape2D_ipp2d")
+[node name="Portal" parent="." instance=ExtResource("4_vvokv")]
+position = Vector2(963, 308)
