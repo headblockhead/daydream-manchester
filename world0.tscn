@@ -22,6 +22,14 @@ offset_bottom = 970.0
 texture = ExtResource("1_mbvbo")
 stretch_mode = 1
 
+[node name="WorldNumber" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 23.0
+offset_right = 42.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 25
+text = "0"
+
 [node name="Player" parent="." instance=ExtResource("2_luep3")]
 position = Vector2(86, 266)
 
@@ -33,10 +41,10 @@ tile_set = ExtResource("2_vvokv")
 position = Vector2(408, 309)
 
 [node name="InfoLabel1" type="Label" parent="."]
-offset_left = 48.0
-offset_top = 51.0
-offset_right = 340.0
-offset_bottom = 74.0
+offset_left = 229.0
+offset_top = 60.0
+offset_right = 685.0
+offset_bottom = 95.0
 theme_override_font_sizes/font_size = 25
 text = "Welcome to untitled adventure game!"
 
@@ -49,29 +57,29 @@ theme_override_font_sizes/font_size = 25
 text = "Use A and D or the left and right arrows to move left or right."
 
 [node name="InfoLabel3" type="Label" parent="."]
-offset_left = 55.0
-offset_top = 153.0
-offset_right = 789.0
-offset_bottom = 188.0
+offset_left = 231.0
+offset_top = 147.0
+offset_right = 673.0
+offset_bottom = 182.0
 theme_override_font_sizes/font_size = 25
 text = "Press W, up arrow, or space to jump."
 
 [node name="InfoLabel4" type="Label" parent="."]
-offset_left = 487.0
-offset_top = 213.0
-offset_right = 1221.0
-offset_bottom = 248.0
+offset_left = 474.0
+offset_top = 195.0
+offset_right = 1089.0
+offset_bottom = 230.0
 theme_override_font_sizes/font_size = 25
 text = "Go through the portal to move on to the next level!"
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Portal-World0to1" type="Area2D" parent="."]
 position = Vector2(1089, 285)
 script = ExtResource("6_i42b6")
 target_scene = ExtResource("7_kft3f")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal-World0to1"]
 shape = SubResource("RectangleShape2D_p6a4b")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Portal-World0to1"]
 scale = Vector2(2, 2)
 texture = ExtResource("5_0coyo")
