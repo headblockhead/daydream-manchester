@@ -190,7 +190,7 @@ tile_map_data = PackedByteArray("AAAAABQAAQABAAEAAAABABQAAQABAAEAAAACABQAAQABAAE
 tile_set = SubResource("TileSet_i3pqv")
 
 [node name="Node2D2" parent="." instance=ExtResource("3_1rg5t")]
-position = Vector2(209, 316)
+position = Vector2(209, 592)
 
 [node name="InfoLabel1" type="Label" parent="."]
 offset_left = 48.0
@@ -201,31 +201,31 @@ theme_override_font_sizes/font_size = 25
 text = "Welcome to untitled adventure game!"
 
 [node name="InfoLabel2" type="Label" parent="."]
-offset_left = 96.0
+offset_left = 363.0
 offset_top = 102.0
-offset_right = 830.0
+offset_right = 1097.0
 offset_bottom = 137.0
 theme_override_font_sizes/font_size = 25
 text = "Use A and D or the left and right arrows to move left or right."
 
 [node name="InfoLabel3" type="Label" parent="."]
-offset_left = 143.0
+offset_left = 55.0
 offset_top = 153.0
-offset_right = 877.0
+offset_right = 789.0
 offset_bottom = 188.0
 theme_override_font_sizes/font_size = 25
 text = "Press W, up arrow, or space to jump."
 
 [node name="InfoLabel4" type="Label" parent="."]
-offset_left = 190.0
-offset_top = 204.0
-offset_right = 924.0
-offset_bottom = 239.0
+offset_left = 487.0
+offset_top = 213.0
+offset_right = 1221.0
+offset_bottom = 248.0
 theme_override_font_sizes/font_size = 25
 text = "Go through the portal to move on to the next level!"
 
 [node name="Portal" type="Area2D" parent="."]
-position = Vector2(1056, 576)
+position = Vector2(1055, 576)
 script = ExtResource("4_mbvbo")
 target_scene = ExtResource("5_ipp2d")
 
