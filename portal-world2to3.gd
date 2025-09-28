@@ -8,5 +8,5 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("player") and target_scene:
-		print("portal: player _on_body_entered")
+		print("portal w2to3: player _on_body_entered")
 		get_tree().change_scene_to_packed(target_scene)

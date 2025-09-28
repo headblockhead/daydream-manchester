@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=4 uid="uid://ckudr8chj1kgo"]
+[gd_scene load_steps=10 format=4 uid="uid://ckudr8chj1kgo"]
 
+[ext_resource type="Script" uid="uid://dburwxgga7jn1" path="res://world-defaultscript.gd" id="1_i42b6"]
 [ext_resource type="Texture2D" uid="uid://bagc3halx24jm" path="res://bgtile.png" id="1_mbvbo"]
 [ext_resource type="PackedScene" uid="uid://corge3g4cu8iw" path="res://player.tscn" id="2_luep3"]
 [ext_resource type="TileSet" uid="uid://b5kler1tbkp7o" path="res://tilemap.tres" id="2_vvokv"]
@@ -11,8 +12,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6a4b"]
 size = Vector2(46, 58)
 
-[node name="Node2D" type="Node2D"]
+[node name="World" type="Node2D"]
 texture_filter = 1
+position = Vector2(-1, 0)
+script = ExtResource("1_i42b6")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = -217.0
@@ -41,36 +44,44 @@ tile_set = ExtResource("2_vvokv")
 position = Vector2(408, 309)
 
 [node name="InfoLabel1" type="Label" parent="."]
-offset_left = 229.0
-offset_top = 60.0
-offset_right = 685.0
-offset_bottom = 95.0
+offset_left = 181.0
+offset_top = 34.0
+offset_right = 637.0
+offset_bottom = 69.0
 theme_override_font_sizes/font_size = 25
-text = "Welcome to untitled adventure game!"
+text = "welcome to untitled adventure game!"
 
 [node name="InfoLabel2" type="Label" parent="."]
-offset_left = 363.0
-offset_top = 102.0
-offset_right = 1097.0
-offset_bottom = 137.0
+offset_left = 395.0
+offset_top = 76.0
+offset_right = 1129.0
+offset_bottom = 111.0
 theme_override_font_sizes/font_size = 25
-text = "Use A and D or the left and right arrows to move left or right."
+text = "use a and d or the left and right arrows to move left or right."
 
 [node name="InfoLabel3" type="Label" parent="."]
-offset_left = 231.0
-offset_top = 147.0
-offset_right = 673.0
-offset_bottom = 182.0
+offset_left = 173.0
+offset_top = 117.0
+offset_right = 615.0
+offset_bottom = 152.0
 theme_override_font_sizes/font_size = 25
-text = "Press W, up arrow, or space to jump."
+text = "press w, up arrow, or space to jump."
 
 [node name="InfoLabel4" type="Label" parent="."]
-offset_left = 474.0
-offset_top = 195.0
-offset_right = 1089.0
-offset_bottom = 230.0
+offset_left = 506.0
+offset_top = 155.0
+offset_right = 1121.0
+offset_bottom = 190.0
 theme_override_font_sizes/font_size = 25
-text = "Go through the portal to move on to the next level!"
+text = "go through the portal to move on to the next level!"
+
+[node name="InfoLabel5" type="Label" parent="."]
+offset_left = 173.0
+offset_top = 198.0
+offset_right = 788.0
+offset_bottom = 233.0
+theme_override_font_sizes/font_size = 25
+text = "press backspace to reset a level."
 
 [node name="Portal-World0to1" type="Area2D" parent="."]
 position = Vector2(1089, 285)

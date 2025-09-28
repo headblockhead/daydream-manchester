@@ -1,17 +1,19 @@
-[gd_scene load_steps=9 format=4 uid="uid://cy0aawa72hb4b"]
+[gd_scene load_steps=10 format=4 uid="uid://cy0aawa72hb4b"]
 
 [ext_resource type="Texture2D" uid="uid://bagc3halx24jm" path="res://bgtile.png" id="1_46256"]
+[ext_resource type="Script" uid="uid://dburwxgga7jn1" path="res://world-defaultscript.gd" id="1_f5bfu"]
 [ext_resource type="TileSet" uid="uid://b5kler1tbkp7o" path="res://tilemap.tres" id="2_f5bfu"]
 [ext_resource type="PackedScene" uid="uid://corge3g4cu8iw" path="res://player.tscn" id="3_xjnkp"]
 [ext_resource type="PackedScene" path="res://friend.tscn" id="4_mf6h1"]
 [ext_resource type="Script" uid="uid://u8brusmb1x2u" path="res://portal-world2to3.gd" id="5_46256"]
-[ext_resource type="PackedScene" uid="uid://dwqbpjn7sk2r4" path="res://TitleScreen/title_screen.tscn" id="6_d62yq"]
+[ext_resource type="PackedScene" uid="uid://rkntgm3li7an" path="res://world3.tscn" id="7_f5bfu"]
 [ext_resource type="Texture2D" uid="uid://ckk82iy6h817l" path="res://portal.png" id="7_hg5vs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7r24r"]
 size = Vector2(46, 58)
 
-[node name="Node2D" type="Node2D"]
+[node name="World" type="Node2D"]
+script = ExtResource("1_f5bfu")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = -159.0
@@ -42,7 +44,7 @@ position = Vector2(184, 278)
 [node name="Portal-World2to3" type="Area2D" parent="."]
 position = Vector2(1085, 481)
 script = ExtResource("5_46256")
-target_scene = ExtResource("6_d62yq")
+target_scene = ExtResource("7_f5bfu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal-World2to3"]
 shape = SubResource("RectangleShape2D_7r24r")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwqbpjn7sk2r4"]
+[gd_scene load_steps=6 format=3 uid="uid://dwqbpjn7sk2r4"]
 
 [ext_resource type="Script" uid="uid://bmn2wi2uadrln" path="res://TitleScreen.gd" id="1_3obt4"]
+[ext_resource type="Texture2D" uid="uid://bagc3halx24jm" path="res://bgtile.png" id="2_2e2ej"]
 [ext_resource type="Texture2D" uid="uid://dpilxijxj1bx8" path="res://TitleScreen/flag-plane.png" id="2_ux371"]
 [ext_resource type="Texture2D" uid="uid://b2d0lv8a8bwct" path="res://TitleScreen/daydream.png" id="3_2e2ej"]
 
@@ -15,6 +16,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3obt4")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -159.0
+offset_top = -186.0
+offset_right = 1421.0
+offset_bottom = 900.0
+texture = ExtResource("2_2e2ej")
+stretch_mode = 1
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 layout_mode = 0
@@ -46,9 +56,9 @@ text = "play"
 
 [node name="InfoLabel2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 61.0
+offset_left = 55.0
 offset_top = 120.0
-offset_right = 410.0
+offset_right = 404.0
 offset_bottom = 265.0
 theme_override_font_sizes/font_size = 24
 text = "created by:
