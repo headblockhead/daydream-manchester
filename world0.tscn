@@ -10,9 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://djk2f7pqg8j1l" path="res://world1.tscn" id="7_kft3f"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_mbvbo"]
-vertices = PackedVector2Array(1271.9297, 702.25, -137.10156, 738.72656, -144.89063, 8.328125, 1267.0625, -88.28906)
+vertices = PackedVector2Array(1461.6797, -197.13281, 1428.2891, 872.3672, -319.97656, 940.60156, -318.0078, -219.86719)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-155, -1, -147, 749, 1282, 712, 1277, -99)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-328, -230, -330, 951, 1438, 882, 1472, -207)])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6a4b"]
 size = Vector2(46, 58)
@@ -82,6 +82,7 @@ player = NodePath("../Player")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_mbvbo")
+use_edge_connections = false
 
 [node name="InfoLabel5" type="Label" parent="."]
 offset_left = 173.0
