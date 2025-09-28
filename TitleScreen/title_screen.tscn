@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwqbpjn7sk2r4"]
+[gd_scene load_steps=5 format=3 uid="uid://dwqbpjn7sk2r4"]
 
 [ext_resource type="Script" uid="uid://bmn2wi2uadrln" path="res://TitleScreen.gd" id="1_3obt4"]
+[ext_resource type="Texture2D" uid="uid://dpilxijxj1bx8" path="res://TitleScreen/flag-plane.png" id="2_ux371"]
+[ext_resource type="Texture2D" uid="uid://b2d0lv8a8bwct" path="res://TitleScreen/daydream.png" id="3_2e2ej"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3obt4"]
 bg_color = Color(0.31431612, 0.31431612, 0.31431603, 1)
@@ -14,22 +16,40 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3obt4")
 
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 482.0
+offset_right = 351.33594
+offset_bottom = 543.0
+texture = ExtResource("2_ux371")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 509.0
+offset_right = 295.80176
+offset_bottom = 576.0
+texture = ExtResource("3_2e2ej")
+expand_mode = 1
+
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 465.0
-offset_top = 478.0
-offset_right = 1013.0
-offset_bottom = 580.0
+offset_left = 574.0
+offset_top = 515.0
+offset_right = 1122.0
+offset_bottom = 617.0
 theme_override_font_sizes/font_size = 31
 theme_override_styles/normal = SubResource("StyleBoxFlat_3obt4")
 text = "play"
 
 [node name="InfoLabel2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 106.0
-offset_top = 237.0
-offset_right = 455.0
-offset_bottom = 382.0
+offset_left = 61.0
+offset_top = 120.0
+offset_right = 410.0
+offset_bottom = 265.0
 theme_override_font_sizes/font_size = 24
 text = "created by:
 Edward H (headblockhead)
@@ -38,20 +58,20 @@ Salar Q (qureshisalar572-byte)"
 
 [node name="InfoLabel1" type="Label" parent="."]
 layout_mode = 0
-offset_left = 362.0
-offset_top = 179.0
-offset_right = 864.0
-offset_bottom = 224.0
-theme_override_font_sizes/font_size = 32
+offset_left = 59.0
+offset_top = 580.0
+offset_right = 466.0
+offset_bottom = 616.0
+theme_override_font_sizes/font_size = 26
 text = "made for Daydream Manchester"
 
 [node name="TitleLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 115.0
-offset_top = 89.0
-offset_right = 643.0
-offset_bottom = 150.0
-theme_override_font_sizes/font_size = 44
+offset_left = 55.0
+offset_top = 42.0
+offset_right = 678.0
+offset_bottom = 114.0
+theme_override_font_sizes/font_size = 52
 text = "untitled adventure game"
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

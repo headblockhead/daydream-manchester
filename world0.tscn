@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://ckudr8chj1kgo"]
+[gd_scene load_steps=8 format=4 uid="uid://ckudr8chj1kgo"]
 
+[ext_resource type="Texture2D" uid="uid://d2y5q0wjtdvg0" path="res://BACKGTOUND.png" id="1_mbvbo"]
 [ext_resource type="Texture2D" uid="uid://barm63frdlcir" path="res://tileset.png" id="1_nxx1f"]
 [ext_resource type="PackedScene" uid="uid://corge3g4cu8iw" path="res://player.tscn" id="2_luep3"]
-[ext_resource type="PackedScene" uid="uid://duxiutacar2iy" path="res://friend.tscn" id="3_1rg5t"]
-[ext_resource type="PackedScene" uid="uid://dof5o4jaeea7i" path="res://portal.tscn" id="4_vvokv"]
+[ext_resource type="PackedScene" path="res://friend.tscn" id="3_1rg5t"]
+[ext_resource type="PackedScene" path="res://portal.tscn" id="4_vvokv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_onrkg"]
 resource_name = "terrain"
@@ -393,8 +394,15 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/1 = SubResource("TileSetAtlasSource_onrkg")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 texture_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -19.0
+offset_top = -16.0
+offset_right = 1157.0
+offset_bottom = 665.0
+texture = ExtResource("1_mbvbo")
 
 [node name="Node2D" parent="." instance=ExtResource("2_luep3")]
 position = Vector2(86, 266)
@@ -411,14 +419,17 @@ offset_left = 48.0
 offset_top = 51.0
 offset_right = 340.0
 offset_bottom = 74.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "Welcome to untitled adventure game!"
 
 [node name="InfoLabel2" type="Label" parent="."]
-offset_left = 363.0
-offset_top = 102.0
-offset_right = 1097.0
-offset_bottom = 137.0
+offset_left = 405.0
+offset_top = 110.0
+offset_right = 1139.0
+offset_bottom = 145.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "Use A and D or the left and right arrows to move left or right."
 
