@@ -32,7 +32,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2ghq"]
-size = Vector2(32, 32)
+size = Vector2(30, 30)
 
 [node name="Node2D" type="CharacterBody2D" node_paths=PackedStringArray("nav_agent", "body")]
 script = ExtResource("1_cafaa")

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bxugqnugtnuf1" path="res://player.gd" id="1_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
-size = Vector2(32, 32)
+size = Vector2(30, 30)
 
 [node name="player" type="CharacterBody2D"]
 texture_filter = 1

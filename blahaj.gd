@@ -17,6 +17,10 @@ func _ready() -> void:
 	nav_agent.path_max_distance = 500.0
 	
 func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_accept") && is_on_floor() || is_on_wall():
+		velocity.y = JUMP_VELOCITY
+	if velocity.x > -3 && velocity.x < 3 && is_on_floor() || is_on_wall():
+		velocity.y = JUMP_VELOCITY
 	var direction: Vector2 = nav_agent.get_next_path_position()-global_position
 	change_direction(direction.x)
 	set_movement_target()
@@ -40,9 +44,3 @@ func change_direction(direction: float) -> void:
 		body.flip_h = false
 	elif sign(direction) == 1:
 		body.flip_h = true	
-
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept"):
-		velocity.y = JUMP_VELOCITY
-	elif is_on_floor() && velocity.x == 0 && (position.x + JUMP_THRESHOLD < direction || position.x - JUMP_THRESHOLD > direction):
-		velocity.y = JUMP_VELOCITY
