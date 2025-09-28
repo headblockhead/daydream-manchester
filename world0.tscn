@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=4 uid="uid://ckudr8chj1kgo"]
+[gd_scene load_steps=9 format=4 uid="uid://ckudr8chj1kgo"]
 
 [ext_resource type="Texture2D" uid="uid://bagc3halx24jm" path="res://bgtile.png" id="1_mbvbo"]
 [ext_resource type="PackedScene" uid="uid://corge3g4cu8iw" path="res://player.tscn" id="2_luep3"]
 [ext_resource type="TileSet" uid="uid://b5kler1tbkp7o" path="res://tilemap.tres" id="2_vvokv"]
 [ext_resource type="PackedScene" path="res://friend.tscn" id="3_1rg5t"]
-[ext_resource type="PackedScene" uid="uid://bdcpo0n23vulw" path="res://portal.tscn" id="4_vvokv"]
+[ext_resource type="Texture2D" uid="uid://ckk82iy6h817l" path="res://portal.png" id="5_0coyo"]
+[ext_resource type="Script" uid="uid://ka3q5h8lar2d" path="res://portal-world0to1.gd" id="6_i42b6"]
+[ext_resource type="PackedScene" uid="uid://djk2f7pqg8j1l" path="res://world1.tscn" id="7_kft3f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6a4b"]
+size = Vector2(46, 58)
 
 [node name="Node2D" type="Node2D"]
 texture_filter = 1
@@ -59,5 +64,14 @@ offset_bottom = 248.0
 theme_override_font_sizes/font_size = 25
 text = "Go through the portal to move on to the next level!"
 
-[node name="Portal" parent="." instance=ExtResource("4_vvokv")]
-position = Vector2(963, 308)
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1089, 286)
+script = ExtResource("6_i42b6")
+target_scene = ExtResource("7_kft3f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_p6a4b")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+scale = Vector2(2, 2)
+texture = ExtResource("5_0coyo")

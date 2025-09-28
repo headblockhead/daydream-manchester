@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=4 uid="uid://djk2f7pqg8j1l"]
+[gd_scene load_steps=8 format=4 uid="uid://djk2f7pqg8j1l"]
 
 [ext_resource type="TileSet" uid="uid://b5kler1tbkp7o" path="res://tilemap.tres" id="1_rf4cw"]
 [ext_resource type="PackedScene" uid="uid://corge3g4cu8iw" path="res://player.tscn" id="2_rro2w"]
 [ext_resource type="PackedScene" path="res://friend.tscn" id="3_cxftf"]
-[ext_resource type="PackedScene" uid="uid://bdcpo0n23vulw" path="res://portal.tscn" id="4_cxftf"]
+[ext_resource type="Script" uid="uid://cyexcr6fby8ra" path="res://portal-world1to2.gd" id="4_53ewl"]
+[ext_resource type="PackedScene" uid="uid://dwqbpjn7sk2r4" path="res://TitleScreen/title_screen.tscn" id="5_4752g"]
+[ext_resource type="Texture2D" uid="uid://ckk82iy6h817l" path="res://portal.png" id="6_3x3nl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u8a3u"]
+size = Vector2(46, 58)
 
 [node name="Node2D" type="Node2D"]
 
@@ -17,5 +22,14 @@ position = Vector2(86, 559)
 [node name="Friend" parent="." instance=ExtResource("3_cxftf")]
 position = Vector2(493, 560)
 
-[node name="Portal" parent="." instance=ExtResource("4_cxftf")]
-position = Vector2(1087, 537)
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1090, 540)
+script = ExtResource("4_53ewl")
+target_scene = ExtResource("5_4752g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_u8a3u")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+scale = Vector2(2, 2)
+texture = ExtResource("6_3x3nl")
