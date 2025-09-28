@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dof5o4jaeea7i"]
+
+[ext_resource type="Script" path="res://portal.gd" id="1_grrij"]
+[ext_resource type="PackedScene" uid="uid://dwqbpjn7sk2r4" path="res://TitleScreen/title_screen.tscn" id="2_6r214"]
+[ext_resource type="Texture2D" uid="uid://ckk82iy6h817l" path="res://portal.png" id="3_2pgh4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtc1a"]
+size = Vector2(50, 62)
+
+[node name="Portal" type="Node2D"]
+texture_filter = 1
+
+[node name="Portal" type="Area2D" parent="."]
+script = ExtResource("1_grrij")
+target_scene = ExtResource("2_6r214")
+
+[node name="Sprite2D" type="Sprite2D" parent="Portal"]
+scale = Vector2(2, 2)
+texture = ExtResource("3_2pgh4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal"]
+shape = SubResource("RectangleShape2D_wtc1a")
