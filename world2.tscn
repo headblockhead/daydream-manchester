@@ -1,16 +1,21 @@
-[gd_scene load_steps=10 format=4 uid="uid://cy0aawa72hb4b"]
+[gd_scene load_steps=11 format=4 uid="uid://cy0aawa72hb4b"]
 
 [ext_resource type="Texture2D" uid="uid://bagc3halx24jm" path="res://bgtile.png" id="1_46256"]
 [ext_resource type="Script" uid="uid://dburwxgga7jn1" path="res://world-defaultscript.gd" id="1_f5bfu"]
 [ext_resource type="TileSet" uid="uid://b5kler1tbkp7o" path="res://tilemap.tres" id="2_f5bfu"]
 [ext_resource type="PackedScene" uid="uid://corge3g4cu8iw" path="res://player.tscn" id="3_xjnkp"]
-[ext_resource type="PackedScene" path="res://friend.tscn" id="4_mf6h1"]
+[ext_resource type="PackedScene" uid="uid://duxiutacar2iy" path="res://friend.tscn" id="4_mf6h1"]
 [ext_resource type="Script" uid="uid://u8brusmb1x2u" path="res://portal-world2to3.gd" id="5_46256"]
 [ext_resource type="PackedScene" uid="uid://rkntgm3li7an" path="res://world3.tscn" id="7_f5bfu"]
 [ext_resource type="Texture2D" uid="uid://ckk82iy6h817l" path="res://portal.png" id="7_hg5vs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7r24r"]
 size = Vector2(46, 58)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_f5bfu"]
+vertices = PackedVector2Array(1271.9297, 702.25, -137.10156, 738.72656, -144.89063, 8.328125, 1267.0625, -88.28906)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-155, -1, -147, 749, 1282, 712, 1277, -99)])
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_f5bfu")
@@ -38,8 +43,9 @@ tile_set = ExtResource("2_f5bfu")
 [node name="Player" parent="." instance=ExtResource("3_xjnkp")]
 position = Vector2(235, 279)
 
-[node name="Friend" parent="." instance=ExtResource("4_mf6h1")]
+[node name="Friend" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_mf6h1")]
 position = Vector2(184, 278)
+player = NodePath("../Player")
 
 [node name="Portal-World2to3" type="Area2D" parent="."]
 position = Vector2(1085, 481)
@@ -52,3 +58,6 @@ shape = SubResource("RectangleShape2D_7r24r")
 [node name="Sprite2D" type="Sprite2D" parent="Portal-World2to3"]
 scale = Vector2(2, 2)
 texture = ExtResource("7_hg5vs")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_f5bfu")

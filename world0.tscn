@@ -1,28 +1,24 @@
-[gd_scene load_steps=10 format=4 uid="uid://ckudr8chj1kgo"]
+[gd_scene load_steps=11 format=4 uid="uid://ckudr8chj1kgo"]
 
 [ext_resource type="Script" uid="uid://dburwxgga7jn1" path="res://world-defaultscript.gd" id="1_i42b6"]
 [ext_resource type="Texture2D" uid="uid://bagc3halx24jm" path="res://bgtile.png" id="1_mbvbo"]
 [ext_resource type="PackedScene" uid="uid://corge3g4cu8iw" path="res://player.tscn" id="2_luep3"]
 [ext_resource type="TileSet" uid="uid://b5kler1tbkp7o" path="res://tilemap.tres" id="2_vvokv"]
-[ext_resource type="PackedScene" path="res://friend.tscn" id="3_1rg5t"]
+[ext_resource type="PackedScene" uid="uid://duxiutacar2iy" path="res://friend.tscn" id="3_1rg5t"]
 [ext_resource type="Texture2D" uid="uid://ckk82iy6h817l" path="res://portal.png" id="5_0coyo"]
 [ext_resource type="Script" uid="uid://ka3q5h8lar2d" path="res://portal-world0to1.gd" id="6_i42b6"]
 [ext_resource type="PackedScene" uid="uid://djk2f7pqg8j1l" path="res://world1.tscn" id="7_kft3f"]
-
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_mbvbo"]
 vertices = PackedVector2Array(1271.9297, 702.25, -137.10156, 738.72656, -144.89063, 8.328125, 1267.0625, -88.28906)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-155, -1, -147, 749, 1282, 712, 1277, -99)])
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6a4b"]
 size = Vector2(46, 58)
 
-
 [node name="World" type="Node2D"]
 texture_filter = 1
-position = Vector2(-1, 0)
 script = ExtResource("1_i42b6")
 
 [node name="Background" type="TextureRect" parent="."]
@@ -82,7 +78,7 @@ text = "go through the portal to move on to the next level!"
 
 [node name="friend" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_1rg5t")]
 position = Vector2(386, 362)
-player = NodePath("../player")
+player = NodePath("../Player")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_mbvbo")
