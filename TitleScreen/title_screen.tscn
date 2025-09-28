@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwqbpjn7sk2r4"]
+
+[ext_resource type="Script" uid="uid://bmn2wi2uadrln" path="res://TitleScreen.gd" id="1_3obt4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3obt4"]
+bg_color = Color(0.31431612, 0.31431612, 0.31431603, 1)
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3obt4")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 478.0
+offset_right = 1013.0
+offset_bottom = 580.0
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_3obt4")
+text = "play"
+
+[node name="InfoLabel2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 237.0
+offset_right = 455.0
+offset_bottom = 382.0
+theme_override_font_sizes/font_size = 24
+text = "created by:
+Edward H (headblockhead)
+Evan P (consciousbone)
+Salar Q (qureshisalar572-byte)"
+
+[node name="InfoLabel1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 179.0
+offset_right = 864.0
+offset_bottom = 224.0
+theme_override_font_sizes/font_size = 32
+text = "made for Daydream Manchester"
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 89.0
+offset_right = 643.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 44
+text = "untitled adventure game"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
