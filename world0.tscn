@@ -14,7 +14,7 @@ size = Vector2(46, 58)
 [node name="Node2D" type="Node2D"]
 texture_filter = 1
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 offset_left = -217.0
 offset_top = -116.0
 offset_right = 1363.0
@@ -65,7 +65,7 @@ theme_override_font_sizes/font_size = 25
 text = "Go through the portal to move on to the next level!"
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(1089, 286)
+position = Vector2(1089, 285)
 script = ExtResource("6_i42b6")
 target_scene = ExtResource("7_kft3f")
 
