@@ -93,7 +93,15 @@ offset_top = 198.0
 offset_right = 788.0
 offset_bottom = 233.0
 theme_override_font_sizes/font_size = 25
-text = "press backspace to reset a level."
+text = "press backspace to reset a level, press esc to go to the title screen."
+
+[node name="InfoLabel6" type="Label" parent="."]
+offset_left = 493.0
+offset_top = 583.0
+offset_right = 1112.0
+offset_bottom = 607.0
+theme_override_font_sizes/font_size = 17
+text = "you have a friend following you, called blahaj, keep them safe until the end!"
 
 [node name="Portal-World0to1" type="Area2D" parent="."]
 position = Vector2(1089, 285)
